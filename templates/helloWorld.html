@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<div>
+    <h1>Welcome to jzh practice project!</h1>
+</div>
+<div>
+    当前时间：{{ now_time }}
+    {% for user in user_list %}
+        <li>用户{{ loop.index }}：{{ user }}</li>
+    {% endfor %}
+</div>
+
+<div>
+   {% with arr=['Dog'] %}
+       {% do arr.append('Cat') %}
+       {{ arr }}
+   {% endwith %}
+
+<div>
+   {% with arr=[1,2,3,4,5,6] %}
+       {{ arr| double_step }}
+   {% endwith %}
+</div>
+</div>
+</body>
+</html>
