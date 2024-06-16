@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="//unpkg.com/layui@2.9.1/dist/css/layui.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Hello</title>
     <style>
@@ -61,5 +62,22 @@
 </div>
 <div class="footer">底部区域</div>
 </body>
+
+<script src="//unpkg.com/layui@2.9.1/dist/layui.js"></script>
+<script>
+    layui.use(function () {
+        var upload = layui.upload;
+        var layer = layui.layer;
+        upload.render({
+            elem: '.demo-class-accept', // 绑定多个元素
+            url: '/server_api/upload', // 此处配置你自己的上传接口即可
+            accept: 'file', // 普通文件
+            done: function (res) {
+                layer.msg('上传成功');
+                console.log(res);
+            }
+        });
+    });
+</script>
 
 </html>

@@ -1,4 +1,5 @@
 
+
 {#宏，相当于函数#}
 {% macro test(name, input_type='text', value='') %}
     <input type="{{ input_type }}"
@@ -22,18 +23,3 @@
 
 
 
-<script>
-    layui.use(function () {
-        var upload = layui.upload;
-        var layer = layui.layer;
-        upload.render({
-            elem: '.demo-class-accept', // 绑定多个元素
-            url: '/file', // 此处配置你自己的上传接口即可
-            accept: 'file', // 普通文件
-            done: function (res) {
-                layer.msg('上传成功');
-                console.log(res);
-            }
-        });
-    });
-</script>

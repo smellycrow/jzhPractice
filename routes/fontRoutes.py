@@ -14,6 +14,6 @@ def hello_world():
                            )
 
 
-@app_bp.route('/block')
+@app_bp.route('/upload_file')
 def block_test():
-    return render_template('blockExtend.html')
+    return render_template('upload.html')
